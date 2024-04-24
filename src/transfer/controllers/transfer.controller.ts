@@ -8,27 +8,27 @@ import { TransferInputDto } from '../DTOs/requests/transfer-input.dto'; // Aseg√
 export class TransferController {
     constructor(private readonly transferService: TransferService) {}
 
-    @Get()
+    @Get('getAll')
     async findAll(): Promise<TransferOutputDto[]> {
         return await this.transferService.findAll();
     }
 
-    @Get(':id')
+    @Get('getOne/:id')
     async findOne(@Param('id') id: string): Promise<TransferOutputDto> {
         return await this.transferService.findOne(id);
     }
 
-    @Post()
+    @Post('create')
     async create(@Body() transfer: TransferInputDto): Promise<TransferOutputDto> {
         return await this.transferService.create(transfer);
     }
 
-    @Put(':id')
+    @Put('update/:id')
     async update(@Param('id') id: string, @Body() transfer: TransferDto): Promise<TransferOutputDto> {
         return await this.transferService.update(id, transfer);
     }
 
-    @Delete(':id')
+    @Delete('delete/:id')
     async remove(@Param('id') id: string): Promise<TransferOutputDto> {
         return await this.transferService.remove(id);
     }
