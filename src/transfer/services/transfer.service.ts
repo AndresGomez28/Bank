@@ -4,6 +4,7 @@ import { TransferInputDto } from '../DTOs/requests/transfer-input.dto';
 import { Model } from 'mongoose';
 import { Transfer } from '../entities/transfer.entity';
 import { TransferOutputDto } from '../DTOs/responses/transfer-output.dto';
+import { TransferDto } from '../DTOs/common/transfer.dto';
 
 @Injectable()
 export class TransferService {
@@ -30,11 +31,11 @@ export class TransferService {
         }
     }
 
-    async create(createTransferDto: TransferInputDto): Promise<TransferOutputDto> {
+    async create(createTransferDto: TransferDto): Promise<Transfer> {
         try {
             const createdTransfer = new this.transferModel(createTransferDto);
             const savedTransfer = await createdTransfer.save();
-            return savedTransfer.toObject();
+            return savedTransfer.save();
         } catch (error) {
             throw new Error(`Error occurred while creating transfer: ${error.message}`);
         }

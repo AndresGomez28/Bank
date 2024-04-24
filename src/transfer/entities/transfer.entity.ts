@@ -14,9 +14,6 @@ export class Transfer extends Document {
 
     @Prop({required: true})
     amount: number;
-
-    @Prop({required: true})
-    date: Date;
 }
 
 export const TransferSchema = SchemaFactory.createForClass(Transfer);

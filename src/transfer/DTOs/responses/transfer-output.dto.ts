@@ -3,6 +3,7 @@ import { Type } from 'class-transformer';
 import { TransferDto } from '../common/transfer.dto';
 
 export class TransferOutputDto extends TransferDto {
+    
     @IsDate()
     @IsNotEmpty()
     @Type(() => Date)
