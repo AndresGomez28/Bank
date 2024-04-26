@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { TransferInputDto } from '../DTOs/requests/transfer-input.dto';
 import { Model } from 'mongoose';
@@ -63,5 +63,15 @@ export class TransferService {
         } catch (error) {
             throw new Error(`Error occurred while deleting transfer: ${error.message}`);
         }
+    }
+
+    throwUnhandledError(error: any, context: string, message: string): never {
+        console.error(`Unhandled Error in ${context}:`, error);
+        throw new HttpException(message, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    mapEntityToDto(transfer: Transfer): TransferDto {
+        const { userId, sender, recipient, amount } = transfer;
+        return { userId, sender, recipient, amount };
     }
 }

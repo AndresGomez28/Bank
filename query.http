@@ -15,20 +15,22 @@ POST http://localhost:3000/v1/transfers/create HTTP/1.1
 Content-Type: application/json
 
 {
-    "userId": "1",
-    "sender": "Julian",
-    "recipient":"Andres",
-    "amount": 500.000
+    "userId": "2",
+    "sender": "Andres",
+    "recipient":"Alex",
+    "amount": 850000
 }
 
 ### Update
-PUT  http://localhost:3000/v1/transfers/update/1 HTTP/1.1
+PUT  http://localhost:3000/v1/transfers/update/2 HTTP/1.1
 Content-Type: application/json
 
-{}
+{
+    "amount": 650000
+}
 
 ### Delete
-DELETE  http://localhost:3000/v1/transfers/delete/1 HTTP/1.1
+DELETE  http://localhost:3000/v1/transfers/delete/2 HTTP/1.1
 Content-Type: application/json
 
 {}

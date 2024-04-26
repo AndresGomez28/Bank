@@ -16,8 +16,4 @@ export class TransferDto {
     @IsNotEmpty()
     @IsNumber()
     amount: number;
-
-    @IsNotEmpty()
-    @IsString()
-    date: Date;
 }
