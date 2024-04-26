@@ -73,7 +73,9 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-# .env # en este caso se comenta el ignore del archivo .env, donde se encuentran los datos para la conecxion a la base de datos
+
+# .env 
+
 .env.development.local
 .env.test.local
 .env.production.local
