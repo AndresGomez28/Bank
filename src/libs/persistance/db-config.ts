@@ -1,5 +1,6 @@
 import { registerAs } from "@nestjs/config";
 
+//Se define y registra la configuración de la base de datos utilizando registerAs.
 export default registerAs('dbConfig', () => {
     const dbConfig = {
         db: {

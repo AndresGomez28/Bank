@@ -1,9 +1,9 @@
-# Bank Transfer Management System - [RIWI Bank]
+# Bank Transfer Management System - RIWI Bank
 
-Welcome to the Bank Transfer Management System of [RIWI Bank]!
+Welcome to the Bank Transfer Management System of RIWI Bank!
 
 ## Project Description
-At [Bank Name], we take pride in presenting our Bank Transfer Management System, a platform developed with cutting-edge technology to ensure security and efficiency in fund transfers between bank accounts. This system is designed to facilitate our customers in making transfers quickly and securely, providing them with an exceptional banking experience.
+At RIWI Bank, we take pride in presenting our Bank Transfer Management System, a platform developed with cutting-edge technology to ensure security and efficiency in fund transfers between bank accounts. This system is designed to facilitate our customers in making transfers quickly and securely, providing them with an exceptional banking experience.
 
 ## Key Features
 Our system boasts the following key features:
@@ -29,5 +29,20 @@ To assess the project's success, the following deliverables will be required:
 - *Unit Tests*: For service methods and API endpoints.
 - *Documentation*: Describing the implementation approach and any additional notes.
 
+## Instalation
+1.  Clone this repository to your local machine:
+    git clone https://github.com/AndresGomez28/Bank.git
+
+2.  Install project dependencies by running the following command in the project's root directory:
+    npm install
+
+## Configuration
+1.  Create a .env file in the root directory of the project and configure necessary environment variables. You can use the .env.example file as a reference.
+
+## Usage
+Once you've completed the installation and configuration, you can run the application using the following command:
+    npm run start
+This will start the server.
+
 ---
-This README provides an overview of the project and its requirements. For detailed implementation and usage instructions, please refer to the provided documentation and resources
+This README provides an overview of the project and its requirements. For detailed implementation and usage instructions, please refer to the provided documentation and resources.
