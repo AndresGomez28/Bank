@@ -3,7 +3,7 @@ import { ConfigType } from "@nestjs/config";
 import { MongooseModule } from "@nestjs/mongoose";
 import dbConfig from './db-config';
 
-@Global()
+@Global() // Marca este módulo como global para que sus exportaciones estén disponibles en toda la aplicación.
 @Module({
     imports: [
         MongooseModule.forRootAsync({

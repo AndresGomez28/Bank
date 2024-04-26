@@ -65,11 +65,13 @@ export class TransferService {
         }
     }
 
+    //Un método auxiliar para manejar errores no controlados y lanzar una excepción HTTP.
     throwUnhandledError(error: any, context: string, message: string): never {
         console.error(`Unhandled Error in ${context}:`, error);
         throw new HttpException(message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    //Un método para mapear una entidad de transferencia a un DTO de transferencia.
     mapEntityToDto(transfer: Transfer): TransferDto {
         const { userId, sender, recipient, amount } = transfer;
         return { userId, sender, recipient, amount };
